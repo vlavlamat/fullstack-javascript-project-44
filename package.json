@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/VlaVlaMat/fullstack-javascript-project-44/issues"
   },
-  "homepage": "https://github.com/VlaVlaMat/fullstack-javascript-project-44#readme"
+  "homepage": "https://github.com/VlaVlaMat/fullstack-javascript-project-44#readme",
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.4",
+    "prettier": "^2.8.2"
+  }
 }
