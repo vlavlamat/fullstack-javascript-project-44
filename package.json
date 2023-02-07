@@ -24,6 +24,6 @@
     "prettier": "^2.8.2"
   },
   "bin": {
-    "code": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   }
 }
