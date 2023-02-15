@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 // 1. Game rules
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 
-// 2. Function for getting a random number
+// 2. Get a random number
 const minRangeNumber = 1;
 const maxRangeNumber = 31;
 function getRandomInt(min, max) {
@@ -12,10 +12,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
 }
 
-// 3. Getting random number
-const randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
-
-// 4. Function for checking - even or odd
+// 3. Check if number even or odd
 function isEven(numberForCheck) {
   let evenOrOdd;
   if (numberForCheck % 2 === 0) {
@@ -26,24 +23,33 @@ function isEven(numberForCheck) {
   return evenOrOdd;
 }
 
-// 5. Checking the random number if it is even or odd
-const trueAnswer = isEven(randomNumber);
+// 4. Ask a question
+function questions(number) {
+  console.log(`Question: ${number}`);
+  return String(readlineSync.question('Your answer: '));
+}
 
-// 6. Start the game
-console.log(`Question: ${randomNumber}`);
-const currentAnswer = String(readlineSync.question('Your answer: '));
-
-// 7. Checking the answer
-function compareAnswers(answer) {
-  let correctAnswer;
-  if (answer === 'yes' || answer === 'no') {
-    if (answer === trueAnswer) {
-      correctAnswer = 'Correct!';
-    } else if (answer !== trueAnswer) {
-      correctAnswer = `'${currentAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`;
+// 5. Let's play
+function letsPlay() {
+  let randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+  let currentAnswer = questions(randomNumber);
+  let trueAnswer = isEven(randomNumber);
+  if (currentAnswer === 'yes' || currentAnswer === 'no') {
+    if (currentAnswer === trueAnswer) {
+      let count = 0;
+      while (currentAnswer === trueAnswer && count < 2) {
+        randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+        currentAnswer = questions(randomNumber);
+        trueAnswer = isEven(randomNumber);
+        count += 1;
+      }
+      console.log('Congratulations!');
+    } else {
+      console.log(`'${currentAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, Bill!`);
     }
   } else {
-    correctAnswer = 'Please, use only "yes" or "no"';
+    console.log('Please, use "yes" or "no" in your answer');
   }
-  return correctAnswer;
 }
+
+export default letsPlay;
