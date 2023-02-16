@@ -25,31 +25,32 @@ function isEven(numberForCheck) {
 
 // 4. Ask a question
 function questions(number) {
+  const warning = 'Please, use "yes" or "no" in your answer';
   console.log(`Question: ${number}`);
-  return String(readlineSync.question('Your answer: '));
+  const answer = String(readlineSync.question('Your answer: '));
+  return (answer === 'yes' || answer === 'no') ? answer : warning;
 }
+
+// const randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
 
 // 5. Let's play
 function letsPlay() {
-  let randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
-  let currentAnswer = questions(randomNumber);
-  let trueAnswer = isEven(randomNumber);
-  if (currentAnswer === 'yes' || currentAnswer === 'no') {
-    if (currentAnswer === trueAnswer) {
-      let count = 0;
-      while (currentAnswer === trueAnswer && count < 2) {
-        randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
-        currentAnswer = questions(randomNumber);
-        trueAnswer = isEven(randomNumber);
-        count += 1;
-      }
-      console.log('Congratulations!');
-    } else {
-      console.log(`'${currentAnswer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, Bill!`);
+  const randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+  const currentAnswer = questions(randomNumber);
+  const trueAnswer = isEven(randomNumber);
+  if (currentAnswer !== 'yes' || currentAnswer !== 'no') {
+    console.log(currentAnswer);
+    letsPlay();
+  }
+  if ((currentAnswer === 'yes' || currentAnswer === 'no') && (currentAnswer === trueAnswer)) {
+    let count = 0;
+    while (count < 2) {
+      count += 1;
+      letsPlay();
     }
-  } else {
-    console.log('Please, use "yes" or "no" in your answer');
+  } else if ((currentAnswer === 'yes' || currentAnswer === 'no') && (currentAnswer !== trueAnswer)) {
+
   }
 }
 
-export default letsPlay;
+letsPlay();
