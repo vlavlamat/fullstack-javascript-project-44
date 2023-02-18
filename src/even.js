@@ -4,26 +4,24 @@ import readlineSync from 'readline-sync';
 
 console.log('Welcome to the Brain Games!');
 
-// 1. Get acquainted:
+// 02. Get acquainted:
 
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
-// 2. Game rules:
+// 03. Game rules:
 
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 
-// 3. Get a random number:
+// 04. Get a random number:
 
 const minRangeNumber = 1;
-const maxRangeNumber = 31;
-function getRandomInt(min, max) {
-  const minNumber = Math.ceil(min);
-  const maxNumber = Math.floor(max);
-  return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
+const maxRangeNumber = 30;
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// 4. Check if the number even or odd:
+// 05. Check if the number even or odd:
 
 function isEven(numberForCheck) {
   let evenOrOdd;
@@ -35,10 +33,10 @@ function isEven(numberForCheck) {
   return evenOrOdd;
 }
 
-// 5. Let's play:
+// 06. Let's play:
 
 function letsPlay() {
-  let randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+  let randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
   let trueAnswer = isEven(randomNumber);
   console.log(`Question: ${randomNumber}`);
   let answer = String(readlineSync.question('Your answer: '));
@@ -47,7 +45,7 @@ function letsPlay() {
       console.log('Correct!');
       let i = 0;
       while (i < 2) {
-        randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+        randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
         trueAnswer = isEven(randomNumber);
         console.log(`Question: ${randomNumber}`);
         answer = String(readlineSync.question('Your answer: '));
@@ -61,7 +59,7 @@ function letsPlay() {
     }
   } else {
     console.log('Please, use "yes" or "no" in your answer');
-    randomNumber = getRandomInt(minRangeNumber, maxRangeNumber);
+    randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
     trueAnswer = isEven(randomNumber);
     letsPlay(randomNumber);
   }
