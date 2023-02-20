@@ -1,5 +1,5 @@
 // import readlineSync from 'readline-sync';
-import { greeting, getGameRules } from './index.js';
+import { greeting, getGameRules, evenOrNot } from './index.js';
 
 // 01. Greeting:
 
@@ -9,26 +9,6 @@ greeting();
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no"';
 getGameRules(gameRules);
 
-// 04. Get a random number:
-
-// const minRangeNumber = 1;
-// const maxRangeNumber = 30;
-// function getRandomNumber(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-//
-// // 05. Check if the number even or odd:
-//
-// function isEven(numberForCheck) {
-//   let evenOrOdd;
-//   if (numberForCheck % 2 === 0) {
-//     evenOrOdd = 'yes';
-//   } else if (numberForCheck % 2 !== 0) {
-//     evenOrOdd = 'no';
-//   }
-//   return evenOrOdd;
-// }
-//
 // // 06. Let's play:
 //
 // function letsPlay() {

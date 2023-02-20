@@ -1,5 +1,5 @@
 // import readlineSync from 'readline-sync';
-import { greeting, getGameRules } from './index.js';
+import { greeting, getGameRules, getOperatorSymbol } from './index.js';
 
 // 01. Greeting:
 
@@ -9,27 +9,9 @@ greeting();
 const gameRules = 'What is the result of the expression?';
 getGameRules(gameRules);
 
-// 03. Get a random numbers:
-
 // const minRangeNumber = 1;
 // const maxRangeNumber = 25;
-//
-// // 05. Get an operator symbol:
-//
-// function getOperatorSymbol() {
-//   const minRange = 1;
-//   const maxRange = 2;
-//   const currentOperator = getRandomNumber(minRange, maxRange);
-//   switch (currentOperator) {
-//     case 1:
-//       return '+';
-//     case 2:
-//       return '-';
-//     default:
-//       return '*';
-//   }
-// }
-//
+
 // // 06. Getting the correct result:
 //
 // function getCorrectResult(firstOperand, secondOperand, operator) {
