@@ -1,5 +1,5 @@
 // import readlineSync from 'readline-sync';
-import { greeting, getGameRules, getOperatorSymbol } from './index.js';
+import { greeting, getGameRules, getOperatorSymbol } from '../src/index.js';
 
 // 01. Greeting:
 

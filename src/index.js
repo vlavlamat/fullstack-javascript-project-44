@@ -5,6 +5,13 @@ function greeting() {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
+  return userName;
+}
+
+// The question and answer function
+function questionAndAnswer(number) {
+  console.log(`Question: ${number}`);
+  return String(readlineSync.question('Your answer: '));
 }
 
 // The function explains game's rules
@@ -41,17 +48,11 @@ function getOperatorSymbol() {
   }
 }
 
-// function gameCycle(firstNumber = null, secondNumber = null, operator = null) {
-//   const question = `Question: ${firstNumber} ${operator} ${secondNumber}`;
-//   console.log(question);
-//   const answer = String(readlineSync.question('Your answer: '));
-//   return `${question}\n${answer}`;
-// }
-
 export {
   getRandomNumber,
   greeting,
   getGameRules,
   evenOrNot,
   getOperatorSymbol,
+  questionAndAnswer,
 };
