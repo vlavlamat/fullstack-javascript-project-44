@@ -6,17 +6,21 @@ function greeting() {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   return userName;
+<<<<<<< HEAD
 }
 
 // The question and answer function
 function questionAndAnswer(number) {
   console.log(`Question: ${number}`);
   return String(readlineSync.question('Your answer: '));
+=======
+>>>>>>> ef7ecc2 (mod: brain-even.js renamed: calc.js new file: even.js deleted: check.js deleted even.js)
 }
 
-// The function explains game's rules
-function getGameRules(rules) {
-  console.log(rules);
+// The question and answer function
+function questionAndAnswer(number) {
+  console.log(`Question: ${number}`);
+  return String(readlineSync.question('Your answer: '));
 }
 
 // The function returns random number in range
@@ -51,7 +55,6 @@ function getOperatorSymbol() {
 export {
   getRandomNumber,
   greeting,
-  getGameRules,
   evenOrNot,
   getOperatorSymbol,
   questionAndAnswer,
