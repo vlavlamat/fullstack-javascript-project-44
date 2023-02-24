@@ -1,4 +1,4 @@
 #! /usr/bin/env node
-import letsPlay from '../games/even.js';
+import guessEven from '../games/even.js';
 
-letsPlay();
+console.log(guessEven());

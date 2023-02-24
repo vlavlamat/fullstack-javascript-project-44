@@ -1,85 +1,50 @@
 // import readlineSync from 'readline-sync';
 import {
-  greeting,
+  greetingAndRules,
   getRandomNumber,
   evenOrNot,
   questionAndAnswer,
 } from '../src/index.js';
 
-// Greetings and getting username:
-const gamerName = greeting();
+// Greetings and getting username and declare rules:
+const rule = 'Answer "yes" if the number is even, otherwise answer "no"';
+const gamerName = greetingAndRules(rule);
 
-// Declare game rules:
-console.log('Answer "yes" if the number is even, otherwise answer "no"');
-
-// Game cycle:
-function gameCycle() {
-  let result;
+// eslint-disable-next-line consistent-return
+function guessEven() {
   const minRangeNumber = 1; // Set up a range for random number
   const maxRangeNumber = 30;
-  const randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get random number
-  const trueAnswer = evenOrNot(randomNumber); // Get true answer
-  const answer = questionAndAnswer(randomNumber); // Asking question and getting answer
+  let randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get random number
+  let trueAnswer = evenOrNot(randomNumber); // Get true answer
+  let answer = questionAndAnswer(randomNumber); // Asking question and getting answer
   if (answer === 'yes' || answer === 'no') {
     if (answer === trueAnswer) {
       console.log('Correct!');
-      result = true;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'`);
-      result = false;
+      let count = 0;
+      while (count < 2) {
+        randomNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
+        trueAnswer = evenOrNot(randomNumber);
+        answer = questionAndAnswer(randomNumber);
+        if (answer === 'yes' || answer === 'no') {
+          if (answer === trueAnswer) {
+            console.log('Correct!');
+            count += 1;
+          }
+          if (answer !== trueAnswer) {
+            return `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'\nLet's try again, ${gamerName}!`;
+          }
+        } else {
+          console.log('Please, use "yes" or "no" in your answer');
+        }
+      }
+      return `Congratulations, ${gamerName}`;
     }
-  } else if (answer !== 'yes' || answer !== 'no') {
+    return `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'\nLet's try again, ${gamerName}!`;
+  }
+  if (answer !== 'yes' || answer !== 'no') {
     console.log('Please, use "yes" or "no" in your answer');
-  }
-  return result;
-}
-
-// Let's play:
-// function letsPlay() {
-//   let result = gameCycle();
-//   switch (result) {
-//     case true:
-//       result = gameCycle();
-//       switch (result) {
-//         case true:
-//           result = gameCycle();
-//           switch (result) {
-//             case true:
-//               console.log(`Congratulations, ${gamerName}!`);
-//               break;
-//             case false:
-//               console.log(`Let's try again, ${gamerName}!`);
-//               break;
-//             default:
-//               letsPlay();
-//           }
-//           break;
-//         case false:
-//           console.log(`Let's try again, ${gamerName}!`);
-//           break;
-//         default:
-//           letsPlay();
-//       }
-//       break;
-//     case false:
-//       console.log(`Let's try again, ${gamerName}!`);
-//       break;
-//     default:
-//       letsPlay();
-//   }
-// }
-
-function letsPlay() {
-  let result = gameCycle();
-  if (result === true) {
-    for (let i = 0; i < 2; i += 1) {
-      result = gameCycle();
-    }
-    console.log(`Congratulations, ${gamerName}!`);
-  }
-  if (result === false) {
-    console.log(`Let's try again, ${gamerName}!`);
+    return guessEven();
   }
 }
 
-export default letsPlay;
+export default guessEven;

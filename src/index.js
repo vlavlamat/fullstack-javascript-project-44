@@ -1,10 +1,11 @@
 import readlineSync from 'readline-sync';
 
-// The function greeting player
-function greeting() {
+// The function greeting player and declare rules
+function greetingAndRules(rule) {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
+  console.log(rule);
   return userName;
 }
 
@@ -45,7 +46,7 @@ function getOperatorSymbol() {
 
 export {
   getRandomNumber,
-  greeting,
+  greetingAndRules,
   evenOrNot,
   getOperatorSymbol,
   questionAndAnswer,
