@@ -10,12 +10,16 @@ function greetingAndRules(rule) {
 }
 
 // The question and answer function
-function questionAndAnswer(number) {
-  console.log(`Question: ${number}`);
+function questionAndAnswer(firstNumber, secondNumber, operator) {
+  if (secondNumber === undefined && operator === undefined) {
+    console.log(`Question: ${firstNumber}`);
+    return String(readlineSync.question('Your answer: '));
+  }
+  console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
   return String(readlineSync.question('Your answer: '));
 }
 
-// The function returns random number in range
+// The function returns random number in a range
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -44,10 +48,24 @@ function getOperatorSymbol() {
   }
 }
 
+// 06. Calculate the correct result
+function getCorrectResult(firstOperand, secondOperand, operator) {
+  let result;
+  if (operator === '+') {
+    result = firstOperand + secondOperand;
+  } else if (operator === '-') {
+    result = firstOperand - secondOperand;
+  } else {
+    result = firstOperand * secondOperand;
+  }
+  return String(result);
+}
+
 export {
   getRandomNumber,
   greetingAndRules,
   evenOrNot,
   getOperatorSymbol,
   questionAndAnswer,
+  getCorrectResult,
 };

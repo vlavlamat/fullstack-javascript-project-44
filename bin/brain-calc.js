@@ -1,4 +1,4 @@
 #! /usr/bin/env node
-// import letsPlay from '../src/even.js';
+import letsCalculate from '../games/calc.js';
 
-
+console.log(letsCalculate());

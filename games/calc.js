@@ -1,57 +1,34 @@
-// import readlineSync from 'readline-sync';
-import { greeting, getGameRules, getOperatorSymbol } from '../src/index.js';
+import {
+  greetingAndRules,
+  getRandomNumber,
+  getCorrectResult,
+  getOperatorSymbol,
+  questionAndAnswer,
+} from '../src/index.js';
 
-// 01. Greeting:
+// Greetings and getting username and declare rules:
+const rule = 'What is the result of the expression?';
+const gamerName = greetingAndRules(rule);
 
-greeting();
+function letsCalculate() {
+  let count = 0;
+  const minRangeNumber = 1; // Set up a range for random numbers
+  const maxRangeNumber = 50;
+  while (count < 3) {
+    const firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get first random number
+    const secondNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get second random
+    const operator = getOperatorSymbol(); // Get random operator
+    const correctResult = getCorrectResult(firstNumber, secondNumber, operator);
+    const answer = questionAndAnswer(firstNumber, secondNumber, operator); // Get an answer
+    if (answer === correctResult) {
+      console.log('Correct!');
+      count += 1;
+    }
+    if (answer !== correctResult) {
+      return `'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.\nLet's try again, ${gamerName}!`;
+    }
+  }
+  return `Congratulations, ${gamerName}!`;
+}
 
-// 02. Game rules:
-const gameRules = 'What is the result of the expression?';
-getGameRules(gameRules);
-
-// const minRangeNumber = 1;
-// const maxRangeNumber = 25;
-
-// // 06. Getting the correct result:
-//
-// function getCorrectResult(firstOperand, secondOperand, operator) {
-//   let result;
-//   if (operator === '+') {
-//     result = firstOperand + secondOperand;
-//   } else if (operator === '-') {
-//     result = firstOperand - secondOperand;
-//   } else {
-//     result = firstOperand * secondOperand;
-//   }
-//   return String(result);
-// }
-//
-// // 07. Let's calculate:
-//
-// function letsCalculate() {
-//   let firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
-//   let secondNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
-//   let operator = getOperatorSymbol();
-//   let correctResult = getCorrectResult(firstNumber, secondNumber, operator);
-//   console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
-//   let answer = String(readlineSync.question('Your answer: '));
-//   if (answer === correctResult) {
-//     console.log('Correct!');
-//     let i = 0;
-//     while (i < 2) {
-//       firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
-//       secondNumber = getRandomNumber(minRangeNumber, maxRangeNumber);
-//       operator = getOperatorSymbol();
-//       correctResult = getCorrectResult(firstNumber, secondNumber, operator);
-//       console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
-//       answer = Number(readlineSync.question('Your answer: '));
-//       i += 1;
-//       console.log('Correct!');
-//     }
-//     console.log(`Congratulations, ${user}`);
-//   } else {
-//     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'\nLet's try again, ${user}!`);
-//   }
-// }
-//
-// letsCalculate();
+export default letsCalculate;
