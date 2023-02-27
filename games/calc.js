@@ -1,7 +1,7 @@
 import {
   greetingAndRules,
   getRandomNumber,
-  getCorrectResult,
+  calculateResult,
   getOperatorSymbol,
   questionAndAnswer,
 } from '../src/index.js';
@@ -10,6 +10,7 @@ import {
 const rule = 'What is the result of the expression?';
 const gamerName = greetingAndRules(rule);
 
+// Game main function
 function letsCalculate() {
   const minRangeNumber = 1; // Set up a range for random numbers
   const maxRangeNumber = 50;
@@ -17,7 +18,7 @@ function letsCalculate() {
     const firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get first random number
     const secondNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get second random
     const operator = getOperatorSymbol(); // Get random operator
-    const correctResult = getCorrectResult(firstNumber, secondNumber, operator);
+    const correctResult = calculateResult(firstNumber, secondNumber, operator);
     const answer = questionAndAnswer(firstNumber, secondNumber, operator); // Get an answer
     if (answer === correctResult) {
       console.log('Correct!');

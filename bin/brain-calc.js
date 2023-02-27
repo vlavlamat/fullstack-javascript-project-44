@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 import letsCalculate from '../games/calc.js';
 
 console.log(letsCalculate());

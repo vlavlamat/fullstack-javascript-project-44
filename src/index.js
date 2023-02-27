@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// The function greeting player and declare rules
+// Function greeting player and declare rules for all steps
 function greetingAndRules(rule) {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -9,22 +9,26 @@ function greetingAndRules(rule) {
   return userName;
 }
 
-// The question and answer function
-function questionAndAnswer(firstNumber, secondNumber, operator) {
-  if (secondNumber === undefined && operator === undefined) {
-    console.log(`Question: ${firstNumber}`);
+// The question and answer function for all steps
+function questionAndAnswer(firstValue, secondValue, thirdValue) {
+  if (secondValue === undefined && thirdValue === undefined) {
+    console.log(`Question: ${firstValue}`);
     return String(readlineSync.question('Your answer: '));
   }
-  console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
+  if (thirdValue === undefined) {
+    console.log(`Question: ${firstValue} ${secondValue}`);
+    return String(readlineSync.question('Your answer: '));
+  }
+  console.log(`Question: ${firstValue} ${thirdValue} ${secondValue}`);
   return String(readlineSync.question('Your answer: '));
 }
 
-// The function returns random number in a range
+// Function returns random number in a range for all steps
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// The function check if a number is odd or even
+// Function checking if a number is odd or even for step 5
 function evenOrNot(numberForCheck) {
   let evenOrOdd;
   if (numberForCheck % 2 === 0) {
@@ -35,7 +39,7 @@ function evenOrNot(numberForCheck) {
   return evenOrOdd;
 }
 
-// The function select a random operator among '+', '-', '*'
+// Function select a random operator among '+', '-', '*' for step 6
 function getOperatorSymbol() {
   const operator = Math.floor(Math.random() * 2) + 1;
   switch (operator) {
@@ -48,8 +52,8 @@ function getOperatorSymbol() {
   }
 }
 
-// 06. Calculate the correct result
-function getCorrectResult(firstOperand, secondOperand, operator) {
+// Function calculating the correct result for step 6
+function calculateResult(firstOperand, secondOperand, operator) {
   let result;
   if (operator === '+') {
     result = firstOperand + secondOperand;
@@ -61,11 +65,17 @@ function getCorrectResult(firstOperand, secondOperand, operator) {
   return String(result);
 }
 
+// Function searching for great common devisor
+function getGreatCommonDivisor(firstNumber, secondNumber) {
+  console.log('Hello World!');
+}
+
 export {
   getRandomNumber,
   greetingAndRules,
   evenOrNot,
   getOperatorSymbol,
   questionAndAnswer,
-  getCorrectResult,
+  calculateResult,
+  getGreatCommonDivisor,
 };
