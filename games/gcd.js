@@ -10,7 +10,7 @@ const rule = 'Find the greatest common divisor of given numbers.';
 const gamerName = greetingAndRules(rule);
 
 // Game main function
-function getGreatestDivisor() {
+function greatestDivisorGame() {
   const minRangeNumber = 1; // Set up a range for random numbers
   const maxRangeNumber = 100;
   const firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get first random number
@@ -26,4 +26,4 @@ function getGreatestDivisor() {
   return `Congratulations, ${gamerName}!`;
 }
 
-export default getGreatestDivisor;
+export default greatestDivisorGame;

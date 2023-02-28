@@ -65,9 +65,29 @@ function calculateResult(firstOperand, secondOperand, operator) {
   return String(result);
 }
 
-// Function searching for great common devisor
+// Function searching for great common divisor
 function getGreatCommonDivisor(firstNumber, secondNumber) {
-  console.log('Hello World!');
+  if (firstNumber === 1 || secondNumber === 1) {
+    return 1;
+  }
+  if (firstNumber < secondNumber) {
+    let divisor = Math.floor(firstNumber / 2);
+    while (divisor > 1) {
+      if (firstNumber % divisor === 0 && secondNumber % divisor === 0) {
+        return divisor;
+      }
+      divisor -= 1;
+    }
+  } else if (firstNumber > secondNumber) {
+    let divisor = Math.floor(secondNumber / 2);
+    while (divisor > 1) {
+      if (secondNumber % divisor === 0 && firstNumber % divisor === 0) {
+        return divisor;
+      }
+      divisor -= 1;
+    }
+  }
+  return firstNumber;
 }
 
 export {
