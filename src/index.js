@@ -67,28 +67,49 @@ function calculateResult(firstOperand, secondOperand, operator) {
 
 // Function searching for great common divisor
 function getGreatCommonDivisor(firstNumber, secondNumber) {
-  if (firstNumber === 1 || secondNumber === 1) {
-    return 1;
-  }
-  if (firstNumber < secondNumber) {
-    let divisor = Math.floor(firstNumber / 2);
-    while (divisor > 1) {
-      if (firstNumber % divisor === 0 && secondNumber % divisor === 0) {
-        return divisor;
-      }
-      divisor -= 1;
-    }
-  } else if (firstNumber > secondNumber) {
-    let divisor = Math.floor(secondNumber / 2);
-    while (divisor > 1) {
-      if (secondNumber % divisor === 0 && firstNumber % divisor === 0) {
-        return divisor;
-      }
-      divisor -= 1;
+  let result;
+  for (let divider = firstNumber; divider >= 1; divider -= 1) {
+    if (firstNumber % divider === 0 && secondNumber % divider === 0) {
+      result = String(divider);
+      break;
     }
   }
-  return firstNumber;
+  return result;
 }
+// function getGreatCommonDivisor(firstNumber, secondNumber) {
+//   let result;
+//   let divisor;
+//   if (firstNumber === 1 && secondNumber === 1) {
+//     return String(1);
+//   }
+//   if (firstNumber < secondNumber) {
+//     if (secondNumber % firstNumber === 0) {
+//       return String(firstNumber);
+//     }
+//     divisor = Math.floor(firstNumber / 2);
+//     while (divisor >= 1) {
+//       if (firstNumber % divisor === 0 && secondNumber % divisor === 0) {
+//         result = divisor;
+//         break;
+//       }
+//       divisor -= 1;
+//     }
+//   }
+//   if (firstNumber > secondNumber) {
+//     if (firstNumber % secondNumber === 0) {
+//       return String(secondNumber);
+//     }
+//     divisor = Math.floor(secondNumber / 2);
+//     while (divisor >= 1) {
+//       if (secondNumber % divisor === 0 && firstNumber % divisor === 0) {
+//         result = divisor;
+//         break;
+//       }
+//       divisor -= 1;
+//     }
+//   }
+//   return String(result);
+// }
 
 export {
   getRandomNumber,
