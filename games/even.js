@@ -9,7 +9,7 @@ import {
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const gamerName = greetingAndRules(rule);
 
-// Game main function
+// Main game function
 function guessEven() {
   const minRangeNumber = 1; // Set up a range for random numbers
   const maxRangeNumber = 30;

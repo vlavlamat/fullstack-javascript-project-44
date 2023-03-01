@@ -10,7 +10,7 @@ import {
 const rule = 'What is the result of the expression?';
 const gamerName = greetingAndRules(rule);
 
-// Game main function
+// Main game function
 function letsCalculate() {
   const minRangeNumber = 1; // Set up a range for random numbers
   const maxRangeNumber = 50;
