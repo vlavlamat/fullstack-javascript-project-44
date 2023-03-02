@@ -111,6 +111,20 @@ function getGreatCommonDivisor(firstNumber, secondNumber) {
 //   return String(result);
 // }
 
+// Function returning a random progression array
+function randomProgression(start, step) {
+  const lengthProgression = 9;
+  const progression = [start];
+  let currentNumber = start;
+  let count = 1;
+  while (count <= lengthProgression) {
+    currentNumber += step;
+    progression.push(currentNumber);
+    count += 1;
+  }
+  return progression;
+}
+
 export {
   getRandomNumber,
   greetingAndRules,
@@ -119,4 +133,5 @@ export {
   questionAndAnswer,
   calculateResult,
   getGreatCommonDivisor,
+  randomProgression,
 };

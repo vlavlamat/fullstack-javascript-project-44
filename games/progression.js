@@ -2,7 +2,7 @@ import {
   getRandomNumber,
   greetingAndRules,
   questionAndAnswer,
-  getGreatCommonDivisor,
+  randomProgression,
 } from '../src/index.js';
 
 // Greetings and getting username and declare rules:
@@ -11,7 +11,22 @@ const gamerName = greetingAndRules(rule);
 
 // Main game function
 function getProgressionNumber() {
-  
+  for (let i = 0; i < 3; i += 1) {
+    const startProgression = getRandomNumber(1, 80); // Start progression number
+    const stepProgression = getRandomNumber(1, 4); // Step progression
+    const currentProgression = randomProgression(startProgression, stepProgression);
+    const randomIndex = getRandomNumber(0, currentProgression.length - 1);
+    const hiddenElement = String(currentProgression[randomIndex]);
+    currentProgression[randomIndex] = '..';
+    const answer = questionAndAnswer(currentProgression.join(' '));
+    if (answer === hiddenElement) {
+      console.log('Correct!');
+    }
+    if (answer !== hiddenElement) {
+      return `'${answer}' is wrong answer ;(. Correct answer was '${hiddenElement}'.\nLet's try again, ${gamerName}!`;
+    }
+  }
+  return `Congratulations, ${gamerName}!`;
 }
 
 export default getProgressionNumber;
