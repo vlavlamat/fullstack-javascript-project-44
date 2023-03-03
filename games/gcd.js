@@ -20,8 +20,7 @@ function greatestDivisorGame() {
     const answer = questionAndAnswer(firstNumber, secondNumber); // Get an answer
     if (answer === correctResult) {
       console.log('Correct!');
-    }
-    if (answer !== correctResult) {
+    } else {
       return `'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.\nLet's try again, ${gamerName}!`;
     }
   }

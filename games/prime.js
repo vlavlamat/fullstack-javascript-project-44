@@ -19,8 +19,7 @@ function primeGame() {
     const answer = questionAndAnswer(randomNumber); // Asking question and getting answer
     if (answer === trueAnswer) {
       console.log('Correct!');
-    }
-    if (answer !== trueAnswer) {
+    } else {
       return `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${gamerName}!`;
     }
   }

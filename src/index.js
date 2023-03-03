@@ -30,18 +30,12 @@ function getRandomNumber(min, max) {
 
 // Function checks if a number is odd or even
 function evenOrNot(numberForCheck) {
-  let evenOrOdd;
-  if (numberForCheck % 2 === 0) {
-    evenOrOdd = 'yes';
-  } else if (numberForCheck % 2 !== 0) {
-    evenOrOdd = 'no';
-  }
-  return evenOrOdd;
+  return (numberForCheck % 2 === 0) ? 'yes' : 'no';
 }
 
 // Function selects a random operator among '+', '-', '*' for calculator
 function getOperatorSymbol() {
-  const operator = Math.floor(Math.random() * 2) + 1;
+  const operator = Math.floor(Math.random() * 3) + 1;
   switch (operator) {
     case 1:
       return '+';
@@ -52,17 +46,15 @@ function getOperatorSymbol() {
   }
 }
 
-// Function calculates the correct result for calculator
 function calculateResult(firstOperand, secondOperand, operator) {
-  let result;
-  if (operator === '+') {
-    result = firstOperand + secondOperand;
-  } else if (operator === '-') {
-    result = firstOperand - secondOperand;
-  } else {
-    result = firstOperand * secondOperand;
+  switch (operator) {
+    case '+':
+      return (firstOperand + secondOperand).toString();
+    case '-':
+      return (firstOperand - secondOperand).toString();
+    default:
+      return (firstOperand * secondOperand).toString();
   }
-  return String(result);
 }
 
 // Function searches for great common divisor

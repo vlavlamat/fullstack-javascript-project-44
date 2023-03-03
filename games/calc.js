@@ -13,7 +13,7 @@ const gamerName = greetingAndRules(rule);
 // Main game function
 function letsCalculate() {
   const minRangeNumber = 1; // Set up a range for random numbers
-  const maxRangeNumber = 50;
+  const maxRangeNumber = 30;
   for (let i = 0; i < 3; i += 1) {
     const firstNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get first random number
     const secondNumber = getRandomNumber(minRangeNumber, maxRangeNumber); // Get second random
@@ -22,8 +22,7 @@ function letsCalculate() {
     const answer = questionAndAnswer(firstNumber, secondNumber, operator); // Get an answer
     if (answer === correctResult) {
       console.log('Correct!');
-    }
-    if (answer !== correctResult) {
+    } else {
       return `'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.\nLet's try again, ${gamerName}!`;
     }
   }
