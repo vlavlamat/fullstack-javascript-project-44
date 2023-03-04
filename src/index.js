@@ -23,6 +23,13 @@ function questionAndAnswer(firstValue, secondValue, thirdValue) {
   return String(readlineSync.question('Your answer: '));
 }
 
+// Function returns answers
+function getAnswer(gamerName, gamerAnswer, systemAnswer) {
+  return gamerAnswer === systemAnswer
+    ? 'Correct!'
+    : `'${gamerAnswer}' is wrong answer ;(. Correct answer was '${systemAnswer}'.\nLet's try again, ${gamerName}!`;
+}
+
 // Function returns random number in a range
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -108,4 +115,5 @@ export {
   getGreatCommonDivisor,
   randomProgression,
   primeOrNot,
+  getAnswer,
 };

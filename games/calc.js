@@ -4,6 +4,7 @@ import {
   calculateResult,
   getOperatorSymbol,
   questionAndAnswer,
+  getAnswer,
 } from '../src/index.js';
 
 // Greetings and getting username and declare rules:
@@ -21,9 +22,9 @@ function letsCalculate() {
     const correctResult = calculateResult(firstNumber, secondNumber, operator);
     const answer = questionAndAnswer(firstNumber, secondNumber, operator); // Get an answer
     if (answer === correctResult) {
-      console.log('Correct!');
+      console.log(getAnswer(gamerName, answer, correctResult));
     } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.\nLet's try again, ${gamerName}!`;
+      return getAnswer(gamerName, answer, correctResult);
     }
   }
   return `Congratulations, ${gamerName}!`;

@@ -3,6 +3,7 @@ import {
   greetingAndRules,
   questionAndAnswer,
   randomProgression,
+  getAnswer,
 } from '../src/index.js';
 
 // Greetings and getting username and declare rules:
@@ -20,10 +21,9 @@ function getProgressionNumber() {
     currentProgression[randomIndex] = '..';
     const answer = questionAndAnswer(currentProgression.join(' '));
     if (answer === hiddenElement) {
-      console.log('Correct!');
-    }
-    if (answer !== hiddenElement) {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${hiddenElement}'.\nLet's try again, ${gamerName}!`;
+      console.log(getAnswer(gamerName, answer, hiddenElement));
+    } else {
+      return getAnswer(gamerName, answer, hiddenElement);
     }
   }
   return `Congratulations, ${gamerName}!`;

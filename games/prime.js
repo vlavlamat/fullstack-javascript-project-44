@@ -3,6 +3,7 @@ import {
   getRandomNumber,
   primeOrNot,
   questionAndAnswer,
+  getAnswer,
 } from '../src/index.js';
 
 // Greeting and getting username and declare rules:
@@ -18,9 +19,9 @@ function primeGame() {
     const trueAnswer = primeOrNot(randomNumber);
     const answer = questionAndAnswer(randomNumber); // Asking question and getting answer
     if (answer === trueAnswer) {
-      console.log('Correct!');
+      console.log(getAnswer(gamerName, answer, trueAnswer));
     } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${gamerName}!`;
+      return getAnswer(gamerName, answer, trueAnswer);
     }
   }
   return `Congratulations, ${gamerName}!`;

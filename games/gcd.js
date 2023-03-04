@@ -3,6 +3,7 @@ import {
   greetingAndRules,
   questionAndAnswer,
   getGreatCommonDivisor,
+  getAnswer,
 } from '../src/index.js';
 
 // Greetings and getting username and declare rules:
@@ -19,9 +20,9 @@ function greatestDivisorGame() {
     const correctResult = getGreatCommonDivisor(firstNumber, secondNumber); // Get correct answer
     const answer = questionAndAnswer(firstNumber, secondNumber); // Get an answer
     if (answer === correctResult) {
-      console.log('Correct!');
+      console.log(getAnswer(gamerName, answer, correctResult));
     } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${correctResult}'.\nLet's try again, ${gamerName}!`;
+      return getAnswer(gamerName, answer, correctResult);
     }
   }
   return `Congratulations, ${gamerName}!`;
