@@ -14,7 +14,7 @@ const gamerName = greetingAndRules(rule);
 function getProgressionNumber() {
   for (let i = 0; i < 3; i += 1) {
     const startProgression = getRandomNumber(1, 80); // Start progression number
-    const stepProgression = getRandomNumber(1, 4); // Step progression
+    const stepProgression = getRandomNumber(1, 10); // Step progression
     const currentProgression = randomProgression(startProgression, stepProgression);
     const randomIndex = getRandomNumber(0, currentProgression.length - 1);
     const hiddenElement = String(currentProgression[randomIndex]);
