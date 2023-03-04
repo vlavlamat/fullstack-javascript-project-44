@@ -23,3 +23,4 @@ Arithmetic progression
 
 
 Is it a prime number?
+[![asciicast](https://asciinema.org/a/564725.svg)](https://asciinema.org/a/564725)
