@@ -19,5 +19,7 @@ Greatest common divisor
 
 
 Arithmetic progression
+[![asciicast](https://asciinema.org/a/Ye94Y3gQ0xMvQN1bl28EEtE4C.svg)](https://asciinema.org/a/Ye94Y3gQ0xMvQN1bl28EEtE4C)
+
 
 Is it a prime number?
