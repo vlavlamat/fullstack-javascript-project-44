@@ -6,7 +6,14 @@
 
 <a href="https://codeclimate.com/github/vlavlamat/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a8dba9b82a4a08dd0e3b/maintainability" /></a>
 
-01. GUESS EVEN OR NOT
+Even or not?
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
+Calculator
+[![asciicast](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl.svg)](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl)
 
+Greatest common divisor
+
+Arithmetic progression
+
+Is it a prime number?
