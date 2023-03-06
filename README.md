@@ -20,21 +20,21 @@ brain-progression
 brain-prime
 ```
 
-## <h3>"Even or not?"</h3>
+## <h3>Even or not?</h3>
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
 
-## <h3>"Calculator"</h3>
+## <h3>Calculator</h3>
 [![asciicast](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl.svg)](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl)
 
 
-## <h3>"Greatest common divisor"</h3>
+## <h3>Greatest common divisor</h3>
 [![asciicast](https://asciinema.org/a/fBNosiLUBtKXFFk3TndBjnKnE.svg)](https://asciinema.org/a/fBNosiLUBtKXFFk3TndBjnKnE)
 
 
-## <h3>"Arithmetic progression"</h3>
+## <h3>Arithmetic progression</h3>
 [![asciicast](https://asciinema.org/a/Ye94Y3gQ0xMvQN1bl28EEtE4C.svg)](https://asciinema.org/a/Ye94Y3gQ0xMvQN1bl28EEtE4C)
 
 
-## <h3>"Prime number?"</h3>
+## <h3>Prime number?</h3>
 [![asciicast](https://asciinema.org/a/564725.svg)](https://asciinema.org/a/564725)
