@@ -7,10 +7,10 @@
 ## <h2>Description</h2>
 These are five console games:
 1. Even or not? You have to guess if a number is even or odd.
-2. Calculator. Let's calculate an expression.
+2. Calculator. You will be given an expression - prove your calculation power!
 3. Greatest common divisor. In this game you are going to find a greatest commont divisor for two numbers.
-4. Progression. A random progression has hidden element - guess a value of it!
-5. Prime number. There are a lot of prime numbers in a Universe - check out if you are able to recognize them!
+4. Progression. A random progression has a hidden element - guess a value of it!
+5. Prime number. There are a lot of prime numbers in the Universe - check out if you are able to recognize them!
 
 
 ## <h2>Installation</h2>
