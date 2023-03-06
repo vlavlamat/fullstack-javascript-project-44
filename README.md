@@ -18,9 +18,9 @@ These are five console games:
 
 ```console
 git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
-npm ci
-npm link
 ```
+2. If you download the zip-archive - extract it.
+
 2. Go into a fullstack-javascript-project-44 folder, open a terminal (Linux/MacOS) or PowerShell (Windows) in there and run the following commands:
 
 ```console
