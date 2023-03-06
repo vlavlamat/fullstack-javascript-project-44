@@ -13,7 +13,7 @@ These are five console games:
 5. Prime number. There are a lot of prime numbers in the Universe - check out if you are able to recognize them!
 
 ## <h2>Prerequisition</h2>
-To install the games you have <a href="https://nodejs.org/en/">node.js</a>installed in your system
+To install the games you should have <a href="https://nodejs.org/en/">node.js</a> installed in your system
 
 ## <h2>Installation</h2>
 1. Download the package on your computer by using <strong>git clone</strong> or just download the <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
