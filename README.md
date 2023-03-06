@@ -9,7 +9,9 @@
 ## <a name="installation"></a>Installation
 
 ```console
-npm install
+git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
+npm ci
+npm link
 ```
 
 Even or not?
