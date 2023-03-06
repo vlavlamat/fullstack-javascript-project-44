@@ -13,7 +13,7 @@ npm link
 ## <a name="Games"></a>Games
 
 ```console
-brain-even
+brain-even - you have to guess if a number even or not
 brain-calc
 brain-gcd
 brain-progression
@@ -21,7 +21,6 @@ brain-prime
 ```
 
 ## <h3>Even or not?</h3>
-## <p>You have to guess if number is even or odd</p>
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
 
