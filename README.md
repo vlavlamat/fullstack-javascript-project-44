@@ -14,16 +14,20 @@ These are five console games:
 
 
 ## <h2>Installation</h2>
-Download the package on your computer using git clone or just download the zip <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
+1. Download the package on your computer using <strong>git clone</strong> or just download the <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
+2. 
 ```console
 $ git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
 $ npm ci
 $ npm link
 ```
-
-
-
-## <h2>Start games commands</h2>
+2. Get into fullstack-javascript-project-44 folder open a terminal(Linux/MacOS) or PowerShell(Windows) and execute the folloing commands:
+3. 
+```console
+$ npm ci
+$ npm link
+```
+3. You are all set! Start the games by using the next commands:
 
 ```console
 $ brain-even
