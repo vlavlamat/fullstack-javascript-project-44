@@ -21,7 +21,7 @@ brain-prime
 ```
 
 ## <h3>Even or not?</h3>
-<p>You have to guess if number is even or odd.</p>
+## <p>You have to guess if number is even or odd</p>
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
 
