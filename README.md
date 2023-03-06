@@ -30,11 +30,11 @@ npm link
 3. You are all set! Start the games by using the next commands:
 
 ```console
-$ brain-even
-$ brain-calc
-$ brain-gcd
-$ brain-progression
-$ brain-prime
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
 ```
 
 ## <h3>Even or not?</h3>
