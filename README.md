@@ -6,7 +6,7 @@
 
 ## <h2>Description</h2>
 These are five console games:
-1. Even or not? You have to guess if a number even or odd.
+1. Even or not? You have to guess if a number is even or odd.
 2. Calculator. Let's calculate an expression.
 3. Greatest common divisor. In this game you are going to find a greatest commont divisor for two numbers.
 4. Progression. A random progression has hidden element - guess a value of it!
