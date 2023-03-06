@@ -21,7 +21,7 @@ $ npm ci
 $ npm link
 ```
 
-## <h2>Start game commands</h2>
+## <h2>Start games commands</h2>
 
 ```console
 $ brain-even
