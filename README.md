@@ -4,22 +4,24 @@
 <a href="https://codeclimate.com/github/vlavlamat/fullstack-javascript-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/a8dba9b82a4a08dd0e3b/maintainability" /></a>
 
 
-## <h2>Description></h2>
-These are five console games
+## <h2>Description</h2>
+These are five console games:
 1. Even or not? You have to guess if a number even or odd.
 2. Calculator. Let's calculate an expression.
 3. Greatest common divisor. In this game you are going to find a greatest commont divisor for two numbers.
 4. Progression. A random progression has hidden element - guess a value of it!
 5. Prime number. There are a lot of prime numbers in a Universe - check out if you are able to recognize them!
 
-## <a name="Installation"></a>Installation
+
+## <h2>Installation</h2>
 
 ```console
 $ git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
 $ npm ci
 $ npm link
 ```
-## <a name="Games"></a>Games
+
+## <h2>Start game commands</h2>
 
 ```console
 $ brain-even
