@@ -10,6 +10,15 @@ git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
 npm ci
 npm link
 ```
+## <a name="Games"></a>Games
+
+```console
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+```
 
 ## <h3>"Even or not?"</h3>Even or not?
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
