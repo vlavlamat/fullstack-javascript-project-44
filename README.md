@@ -14,12 +14,14 @@ These are five console games:
 
 
 ## <h2>Installation</h2>
-
+Download the package on your computer using git clone or just download the zip <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
 ```console
-$ git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
+$ git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
 $ npm ci
 $ npm link
 ```
+
+
 
 ## <h2>Start games commands</h2>
 
