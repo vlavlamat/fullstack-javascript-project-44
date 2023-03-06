@@ -14,18 +14,18 @@ These are five console games:
 
 
 ## <h2>Installation</h2>
-1. Download the package on your computer using <strong>git clone</strong> or just download the <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
+1. Download the package on your computer by using <strong>git clone</strong> or just download the <a href="https://github.com/vlavlamat/fullstack-javascript-project-44/archive/refs/heads/main.zip">zip-archive</a>:
 
 ```console
-$ git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
-$ npm ci
-$ npm link
+git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
+npm ci
+npm link
 ```
 2. Go into a fullstack-javascript-project-44 folder, open a terminal (Linux/MacOS) or PowerShell (Windows) in there and run the following commands:
 
 ```console
-$ npm ci
-$ npm link
+npm ci
+npm link
 ```
 3. You are all set! Start the games by using the next commands:
 
