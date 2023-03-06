@@ -23,7 +23,7 @@ brain-prime
 ## <h3>Even or not?</h3>
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
-
+<a href="https://asciinema.org/a/564725" target="_blank"><img src="https://asciinema.org/a/564725.svg" /></a>
 
 ## <h3>Calculator</h3>
 [![asciicast](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl.svg)](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl)
