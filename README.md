@@ -21,7 +21,7 @@ $ git clone https://github.com/vlavlamat/fullstack-javascript-project-44.git
 $ npm ci
 $ npm link
 ```
-2. Get into fullstack-javascript-project-44 folder open a terminal(Linux/MacOS) or PowerShell(Windows) and execute the folloing commands:
+2. Go into a fullstack-javascript-project-44 folder, open a terminal (Linux/MacOS) or PowerShell (Windows) in there and run the following commands:
 
 ```console
 $ npm ci
