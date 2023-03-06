@@ -6,18 +6,18 @@
 ## <a name="installation"></a>Installation
 
 ```console
-git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
-npm ci
-npm link
+$ git clone git@github.com:vlavlamat/fullstack-javascript-project-44.git
+$ npm ci
+$ npm link
 ```
 ## <a name="Games"></a>Games
 
 ```console
-brain-even - you have to guess if a number even or not
-brain-calc
-brain-gcd
-brain-progression
-brain-prime
+$ brain-even
+$ brain-calc
+$ brain-gcd
+$ brain-progression
+$ brain-prime
 ```
 
 ## <h3>Even or not?</h3>
