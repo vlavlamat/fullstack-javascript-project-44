@@ -23,6 +23,7 @@ brain-prime
 ## <h3>Even or not?</h3>
 [![asciicast](https://asciinema.org/a/564704.svg)](https://asciinema.org/a/564704)
 
+<script async id="asciicast-564725" src="https://asciinema.org/a/564725.js"></script>
 
 ## <h3>Calculator</h3>
 [![asciicast](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl.svg)](https://asciinema.org/a/GZklExwxuFnEn4rjhXUBNLyfl)
